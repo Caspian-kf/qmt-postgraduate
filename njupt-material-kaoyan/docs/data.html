@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>数据列表 - 南京邮电大学材料考研信息采集与分析系统</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="data">
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html">南邮材料考研</a>
+      <button class="nav-toggle" type="button" aria-label="展开导航" data-nav-toggle>☰</button>
+      <div class="nav-links" data-nav-links>
+        <a href="index.html">首页</a>
+        <a class="active" href="data.html">数据列表</a>
+        <a href="analysis.html">分析图表</a>
+        <a href="https://github.com/Caspian-kf/qmt-postgraduate" target="_blank" rel="noopener">GitHub 仓库</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-heading">
+      <p class="eyebrow">Data</p>
+      <h1>考研公开信息列表</h1>
+      <p class="muted">从本地 JSON 文件读取并展示，支持按类别、来源和关键词筛选。</p>
+    </section>
+
+    <section class="toolbar" aria-label="数据筛选">
+      <label>
+        类别
+        <select id="category-filter">
+          <option value="">全部类别</option>
+        </select>
+      </label>
+      <label>
+        来源
+        <select id="source-filter">
+          <option value="">全部来源</option>
+        </select>
+      </label>
+      <label class="search-label">
+        关键词
+        <input id="keyword-search" type="search" placeholder="搜索标题、摘要、学院、专业">
+      </label>
+      <button id="reset-filters" class="btn" type="button">重置</button>
+    </section>
+
+    <section class="table-section">
+      <div class="table-meta">
+        <strong id="table-count">0 条信息</strong>
+        <span id="data-status" class="muted">正在读取数据...</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>学校</th>
+              <th>学院</th>
+              <th>专业</th>
+              <th>类别</th>
+              <th>标题</th>
+              <th>摘要</th>
+              <th>发布时间</th>
+              <th>来源</th>
+              <th>原文链接</th>
+              <th>采集时间</th>
+            </tr>
+          </thead>
+          <tbody id="data-table-body"></tbody>
+        </table>
+      </div>
+      <p id="empty-message" class="empty-message hidden">暂无匹配数据，请调整筛选条件或先运行本地爬虫。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>数据来源于公开网页，展示内容以原网站发布为准。</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
