@@ -91,20 +91,20 @@ http://localhost:8000/docs/index.html
 
 ## 7. GitHub Pages 部署方式
 
-推荐方式：
+当前仓库推荐方式：
 
 1. 将项目提交并推送到 GitHub 仓库。
 2. 进入仓库 `Settings`。
 3. 打开 `Pages`。
 4. `Build and deployment` 选择 `Deploy from a branch`。
-5. 分支选择 `main`，目录选择 `/root`。
+5. 分支选择 `main`，目录选择 `/docs`。
 6. 部署后访问：
 
 ```text
-https://你的用户名.github.io/仓库名/njupt-material-kaoyan/docs/index.html
+https://你的用户名.github.io/仓库名/
 ```
 
-本项目的网页默认从 `../data/kaoyan_materials.json` 读取数据。使用 `/root` 发布时，`docs/` 与 `data/` 的相对路径可以保持正常。
+本仓库根目录的 `docs/` 是 GitHub Pages 发布目录，内容来自 `njupt-material-kaoyan/docs/`，并包含前端展示所需的数据文件。
 
 ## 8. 数据采集流程
 

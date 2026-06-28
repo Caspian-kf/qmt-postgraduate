@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>南京邮电大学材料考研信息采集与分析系统</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="home">
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html">南邮材料考研</a>
+      <button class="nav-toggle" type="button" aria-label="展开导航" data-nav-toggle>☰</button>
+      <div class="nav-links" data-nav-links>
+        <a class="active" href="index.html">首页</a>
+        <a href="data.html">数据列表</a>
+        <a href="analysis.html">分析图表</a>
+        <a href="https://github.com/Caspian-kf/qmt-postgraduate" target="_blank" rel="noopener">GitHub 仓库</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div>
+        <p class="eyebrow">公开信息采集 · 静态展示 · 本地分析</p>
+        <h1>南京邮电大学材料考研信息采集与分析系统</h1>
+        <p class="hero-text">
+          本项目面向南京邮电大学材料科学与工程相关考研公开信息，整理招生简章、专业目录、考试大纲、复试细则、拟录取名单、调剂信息等内容，并通过静态网页进行展示与统计分析。
+        </p>
+      </div>
+      <div class="hero-panel">
+        <span>当前版本</span>
+        <strong>V1 静态展示版</strong>
+        <p>数据由本地 Python 爬虫生成，网页可部署到 GitHub Pages。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-title">
+        <h2>数据概览</h2>
+        <p id="home-status" class="muted">正在读取本地数据...</p>
+      </div>
+      <div id="dashboard-cards" class="stats-grid" aria-live="polite"></div>
+    </section>
+
+    <section class="section two-column">
+      <article class="info-card">
+        <h2>系统模块</h2>
+        <ul class="feature-list">
+          <li>本地爬虫：低频采集公开页面，生成 JSON 与 CSV。</li>
+          <li>数据列表：支持类别、来源和关键词检索。</li>
+          <li>分析图表：展示类别、来源和年份分布。</li>
+          <li>静态部署：无需后端框架和数据库。</li>
+        </ul>
+      </article>
+      <article class="info-card">
+        <h2>采集边界</h2>
+        <ul class="feature-list">
+          <li>只采集公开网页信息。</li>
+          <li>不采集登录、验证码、付费墙后的内容。</li>
+          <li>不采集身份证号、手机号等个人隐私信息。</li>
+          <li>遇到 403、429 或验证码页面会跳过。</li>
+        </ul>
+      </article>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>南京邮电大学材料考研信息采集与分析系统 · 仅用于学习与研究</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
