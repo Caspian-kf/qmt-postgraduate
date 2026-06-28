@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>数据列表 - 南京邮电大学材料考研信息采集与分析系统</title>
+  <title>信息列表 - 南京邮电大学材料考研信息采集与分析系统</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body data-page="data">
@@ -13,7 +13,9 @@
       <button class="nav-toggle" type="button" aria-label="展开导航" data-nav-toggle>☰</button>
       <div class="nav-links" data-nav-links>
         <a href="index.html">首页</a>
-        <a class="active" href="data.html">数据列表</a>
+        <a class="active" href="data.html">信息列表</a>
+        <a href="score.html">历年分数线</a>
+        <a href="admission.html">录取统计</a>
         <a href="analysis.html">分析图表</a>
         <a href="https://github.com/Caspian-kf/qmt-postgraduate" target="_blank" rel="noopener">GitHub 仓库</a>
       </div>
@@ -22,28 +24,18 @@
 
   <main class="page">
     <section class="page-heading">
-      <p class="eyebrow">Data</p>
+      <p class="eyebrow">Source Records</p>
       <h1>考研公开信息列表</h1>
-      <p class="muted">从本地 JSON 文件读取并展示，支持按类别、来源和关键词筛选。</p>
+      <p class="muted">保留原始公开信息摘要，支持类别、来源、年份与关键词筛选。</p>
     </section>
 
+    <p class="notice">本页面数据由公开网页采集整理，可能存在滞后或解析误差，最终信息以南京邮电大学官方发布为准。</p>
+
     <section class="toolbar" aria-label="数据筛选">
-      <label>
-        类别
-        <select id="category-filter">
-          <option value="">全部类别</option>
-        </select>
-      </label>
-      <label>
-        来源
-        <select id="source-filter">
-          <option value="">全部来源</option>
-        </select>
-      </label>
-      <label class="search-label">
-        关键词
-        <input id="keyword-search" type="search" placeholder="搜索标题、摘要、学院、专业">
-      </label>
+      <label>类别<select id="category-filter"><option value="">全部类别</option></select></label>
+      <label>来源<select id="source-filter"><option value="">全部来源</option></select></label>
+      <label>年份<select id="year-filter"><option value="">全部年份</option></select></label>
+      <label class="search-label">关键词<input id="keyword-search" type="search" placeholder="搜索标题、摘要、来源"></label>
       <button id="reset-filters" class="btn" type="button">重置</button>
     </section>
 
@@ -56,9 +48,6 @@
         <table>
           <thead>
             <tr>
-              <th>学校</th>
-              <th>学院</th>
-              <th>专业</th>
               <th>类别</th>
               <th>标题</th>
               <th>摘要</th>

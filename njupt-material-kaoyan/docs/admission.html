@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>录取统计 - 南京邮电大学材料考研信息采集与分析系统</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="admission">
+  <header class="site-header">
+    <nav class="navbar">
+      <a class="brand" href="index.html">南邮材料考研</a>
+      <button class="nav-toggle" type="button" aria-label="展开导航" data-nav-toggle>☰</button>
+      <div class="nav-links" data-nav-links>
+        <a href="index.html">首页</a>
+        <a href="data.html">信息列表</a>
+        <a href="score.html">历年分数线</a>
+        <a class="active" href="admission.html">录取统计</a>
+        <a href="analysis.html">分析图表</a>
+        <a href="https://github.com/Caspian-kf/qmt-postgraduate" target="_blank" rel="noopener">GitHub 仓库</a>
+      </div>
+    </nav>
+  </header>
+
+  <main class="page">
+    <section class="page-heading">
+      <p class="eyebrow">Admission</p>
+      <h1>录取情况结构化统计</h1>
+      <p class="muted">只展示聚合统计值，不保存考生个人明细。</p>
+    </section>
+
+    <p class="notice">本页面数据由公开网页采集整理，可能存在滞后或解析误差，最终信息以南京邮电大学官方发布为准。</p>
+
+    <section class="table-section">
+      <div class="table-meta">
+        <strong id="admission-count">0 条录取统计</strong>
+        <span id="admission-status" class="muted">正在读取数据...</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>年份</th>
+              <th>专业代码</th>
+              <th>专业名称</th>
+              <th>计划招生人数</th>
+              <th>复试人数</th>
+              <th>录取人数</th>
+              <th>调剂人数</th>
+              <th>最低分</th>
+              <th>最高分</th>
+              <th>平均分</th>
+              <th>来源链接</th>
+              <th>备注</th>
+            </tr>
+          </thead>
+          <tbody id="admission-table-body"></tbody>
+        </table>
+      </div>
+      <p id="admission-empty-message" class="empty-message hidden">暂无录取统计数据。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer"><p>录取统计只保留聚合值，不展示个人信息。</p></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>

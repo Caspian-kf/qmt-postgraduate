@@ -11,3 +11,4 @@ config/config.json
 data/*.csv
 data/*.json
 logs/*.log
+njupt-material-kaoyan/data/raw/

@@ -172,6 +172,16 @@ h2 {
   margin-top: 32px;
 }
 
+.notice {
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border: 1px solid #f4d6a1;
+  border-radius: 8px;
+  background: #fff8eb;
+  color: #8a4b05;
+  font-size: 14px;
+}
+
 .section-title,
 .table-meta {
   display: flex;
@@ -186,6 +196,12 @@ h2 {
 }
 
 .stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.core-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 16px;
@@ -228,6 +244,24 @@ h2 {
   padding: 22px;
 }
 
+.info-card.compact {
+  min-height: 132px;
+}
+
+.info-card.compact span {
+  display: block;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.info-card.compact strong {
+  display: block;
+  margin-top: 12px;
+  color: var(--primary-dark);
+  font-size: 22px;
+  line-height: 1.35;
+}
+
 .feature-list {
   margin: 0;
   padding-left: 20px;
@@ -248,11 +282,15 @@ h2 {
 
 .toolbar {
   display: grid;
-  grid-template-columns: 180px 220px minmax(260px, 1fr) 88px;
+  grid-template-columns: 160px 200px 130px minmax(240px, 1fr) 88px;
   gap: 14px;
   align-items: end;
   padding: 18px;
   margin-bottom: 18px;
+}
+
+.toolbar.score-toolbar {
+  grid-template-columns: 160px 240px 128px;
 }
 
 label {
@@ -307,7 +345,7 @@ input:focus {
 
 table {
   width: 100%;
-  min-width: 1180px;
+  min-width: 1080px;
   border-collapse: collapse;
   background: #fff;
 }
@@ -360,6 +398,7 @@ tbody tr:hover {
 .link-cell a {
   color: var(--primary);
   font-weight: 700;
+  white-space: nowrap;
 }
 
 .empty-message {
@@ -432,7 +471,8 @@ tbody tr:hover {
     grid-template-columns: 1fr;
   }
 
-  .stats-grid {
+  .stats-grid,
+  .core-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
@@ -455,7 +495,8 @@ tbody tr:hover {
     font-size: 30px;
   }
 
-  .stats-grid {
+  .stats-grid,
+  .core-grid {
     grid-template-columns: 1fr;
   }
 
