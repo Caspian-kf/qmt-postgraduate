@@ -1,0 +1,13 @@
+{
+  "request_interval_seconds": 2,
+  "timeout_seconds": 10,
+  "max_pages": 1,
+  "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36",
+  "targets": [
+    {
+      "name": "示例站点",
+      "url": "https://example.com",
+      "enabled": false
+    }
+  ]
+}
